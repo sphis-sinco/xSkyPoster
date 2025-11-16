@@ -13,7 +13,7 @@ if input("Are you sure you want to post this? (y/n)\n> ") == "y":
             with open('_posts/resources/' + post["image"]["path"], 'rb') as media:
                 img_data = media.read()
                 
-                resp = twitter_api.upload_media_simple(media=media)
+                resp = twitter_api.upload_media_simple(media=img_data)
                 print(resp)
                 
                 if not (post["image"]["alt"] == None):
