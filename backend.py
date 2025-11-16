@@ -10,7 +10,7 @@ x_api = TwitterApi(
     consumer_key=x_consumer_key, 
     consumer_secret=x_consumer_secret, 
     access_token=x_access_token, 
-    access_token_secret=x_access_token_secret
+    access_secret=x_access_token_secret
 )
 
 bluesky_client = Client()
