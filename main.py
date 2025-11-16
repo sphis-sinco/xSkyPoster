@@ -1,16 +1,20 @@
 import tweepy
+from atproto import Client
 
-consumer_key = open("consumer_key.txt")
-consumer_secret = open("consumer_secret.txt")
-access_token = open("access_token.txt")
-access_token_secret = open("access_token_secret.txt")
+x_consumer_key = open("x/consumer_key.txt")
+x_consumer_secret = open("x/consumer_secret.txt")
+x_access_token = open("x/access_token.txt")
+x_access_token_secret = open("x/access_token_secret.txt")
 
-auth = tweepy.OAuth1UserHandler(
-    consumer_key, consumer_secret, access_token, access_token_secret
+x_auth = tweepy.OAuth1UserHandler(
+    x_consumer_key, x_consumer_secret, x_access_token, x_access_token_secret
 )
 
-api = tweepy.API(auth)
+x_api = tweepy.API(x_auth)
 
-public_tweets = api.home_timeline()
+public_tweets = x_api.home_timeline()
 for tweet in public_tweets:
     print(tweet.text)
+
+bluesky_client = Client()
+bluesky_client.login(open("bluesky/identifier.txt"), open("bluesky/password.txt"))
