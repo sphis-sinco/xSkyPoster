@@ -1,0 +1,7 @@
+{
+    "text": "Hello there! Old sport! Have a face.",
+    "image": {
+        "path": "face.png",
+        "alt" : "a face."
+    }
+}
